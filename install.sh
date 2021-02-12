@@ -15,6 +15,5 @@
  minikube addons enable dashboard
  minikube service list
  kubectl get svc -n kubernetes-dashboard
- kubectl edit svc kubernetes-dashboard -n kubernetes-dashboard
  kubectl describe svc kubernetes-dashboard -n kubernetes-dashboard
  kubectl apply -f kubernetes-dashboard-nodeport.yaml
