@@ -17,4 +17,4 @@
  sleep 5
  kubectl get svc -n kubernetes-dashboard
  kubectl describe svc kubernetes-dashboard -n kubernetes-dashboard
- kubectl apply -f kubernetes-dashboard-nodeport.yaml
+ kubectl patch -n kubernetes-dashboard service kubernetes-dashboard -p '{"spec": {"type":"NodePort"}}'
